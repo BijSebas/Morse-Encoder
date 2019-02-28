@@ -1,0 +1,16 @@
+def morse():
+    
+    # Gives general information on the functioning of the program
+    print('Words are separated with a / and . starts a new line.')
+    
+    # Variable that is defined by the upper case version of the user input
+    string = input().upper()
+    
+    # Dictionairy that will be used to create a table using the .maketrans method
+    mc = {'A':'.-  ','B':'-...  ','C':'-.-.  ','D':'-..  ','E':'.  ','F':'..-.  ','G':'--.  ','H':'....  ','I':'..  ','J':'.---  ','K':'-.-  ','L':'.-..  ','M':'--  ','N':'-.  ','O':'---  ','P':'.--.  ','Q':'--.-  ','R':'.-.  ','S':'...  ','T':'-  ','U':'..-  ','V':'...-  ','W':'.--  ','X':'-..-  ','Y':'-.--  ','Z':'--..  ',' ':'/','.':'\n',',':'\t'}
+    
+    # Creating a table that allows us to use the .translate method to translate the user input into morse code
+    table = string.maketrans(mc)
+    
+    # Prints the translated string(s)
+    print(string.translate(table))
